@@ -17,10 +17,10 @@ const jobTypes = [
 
 export default function BasicInfoTab({ formData, errors, handleChange, handleSelectChange }) {
   return (
-    <div className="space-y-6 p-4">
+    <div className="space-y-6 p-4!">
       <motion.div custom={0} variants={inputVariants}>
-        <label className="block text-sm font-semibold text-gray-700 mb-2 flex items-center">
-          <FiBriefcase className="mr-2 text-indigo-600" />
+        <label className="block text-sm font-semibold text-gray-700 mb-2! flex items-center">
+          <FiBriefcase className="mr-2! text-indigo-600" />
           Job Title *
         </label>
         <input
@@ -29,14 +29,14 @@ export default function BasicInfoTab({ formData, errors, handleChange, handleSel
           onChange={handleChange}
           required
           placeholder="e.g. Senior React Developer"
-          className="w-full p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="w-full p-2! rounded-sm border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
         />
         {errors.title && <p className="text-red-600 text-sm mt-1">{errors.title}</p>}
       </motion.div>
 
       <motion.div custom={1} variants={inputVariants}>
-        <label className="block text-sm font-semibold text-gray-700 mb-2 flex items-center">
-          <FiBriefcase className="mr-2 text-indigo-600" />
+        <label className="block text-sm font-semibold text-gray-700 mb-2! flex items-center">
+          <FiBriefcase className="mr-2! text-indigo-600" />
           Company Name *
         </label>
         <input
@@ -45,28 +45,28 @@ export default function BasicInfoTab({ formData, errors, handleChange, handleSel
           onChange={handleChange}
           required
           placeholder="Your company name"
-          className="w-full p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="w-full p-2! rounded-sm border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
         />
         {errors.company && <p className="text-red-600 text-sm mt-1">{errors.company}</p>}
       </motion.div>
 
       <motion.div custom={2} variants={inputVariants}>
-        <label className="block text-sm font-semibold text-gray-700 mb-2 flex items-center">
-          <FiMapPin className="mr-2 text-indigo-600" />
+        <label className="block text-sm font-semibold text-gray-700 mb-2! flex items-center">
+          <FiMapPin className="mr-2! text-indigo-600" />
           Location
         </label>
         <input
           name="location"
           value={formData.location}
           onChange={handleChange}
-          placeholder="e.g. New York, NY or Remote"
-          className="w-full p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          placeholder="e.g.India,  New York, NY or Remote"
+          className="w-full p-2! rounded-sm border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
         />
       </motion.div>
 
       <motion.div custom={3} variants={inputVariants}>
-        <label className="block text-sm font-semibold text-gray-700 mb-1 flex items-center">
-          <FiType className="mr-2 text-indigo-600" />
+        <label className="block text-sm font-semibold text-gray-700 mb-2! flex items-center">
+          <FiType className="mr-2! text-indigo-600" />
           Job Type
         </label>
         <Select
@@ -88,11 +88,11 @@ export default function BasicInfoTab({ formData, errors, handleChange, handleSel
     value={formData.description}
     onChange={handleChange}
     rows={4}
-    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+    className="mt-1! block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
     placeholder="Describe the responsibilities, tech stack, and more..."
   />
   {errors.description && (
-    <p className="text-red-500 text-sm mt-1">{errors.description}</p>
+    <p className="text-red-500 text-sm mt-1!">{errors.description}</p>
   )}
       </motion.div>
     </div>

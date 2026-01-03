@@ -11,9 +11,7 @@ export default function CreateJob() {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-6">Post a New Job</h2>
       <JobForm onSuccess={handleSuccess} />
-      
     </div>
   )
 }

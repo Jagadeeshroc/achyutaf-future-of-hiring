@@ -52,38 +52,38 @@ export default function JobPreview({ formData,
           </AnimatePresence>
         </div> */}
 
-        <div className="bg-white rounded-lg p-4 mb-6">
+        <div className="bg-white rounded-lg p-4! mb-3!">
           <div>
-            <h4 className="text-black">{formData.title || 'Job Title'}</h4>
-            <p className="text-indigo-600">{formData.company || 'Company Name'}</p>
+            <h4 className="text-black m-2!">{formData.title || 'Job Title'}</h4>
+            <p className="text-indigo-600 m-2!">{formData.company || 'Company Name'}</p>
           </div>
 
-          <div className="flex flex-wrap gap-2 mb-2">
+          <div className="flex flex-wrap gap-2 mb-2!">
             {formData.location && (
-              <span className="flex items-center text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">
-                <FiMapPin className="mr-1" /> {formData.location}
+              <span className="flex items-center text-sm bg-blue-100 text-blue-800 p-2! rounded-full">
+                <FiMapPin className="mr-1!" /> {formData.location}
               </span>
             )}
             {formData.type && (
-              <span className="flex items-center text-sm bg-purple-100 text-purple-800 px-3 py-1 rounded-full">
-                <FiBriefcase className="mr-1" /> {formData.type}
+              <span className="flex items-center text-sm bg-purple-100 text-purple-800 p-2! rounded-full">
+                <FiBriefcase className="mr-1!" /> {formData.type}
               </span>
             )}
             {formData.experienceRequired && (
-              <span className="flex items-center text-sm bg-green-100 text-green-800 px-3 py-1 rounded-full">
-                <FiUser className="mr-1" /> {formData.experienceRequired}
+              <span className="flex items-center text-sm bg-green-100 text-green-800 p-2! rounded-full">
+                <FiUser className="mr-1!" /> {formData.experienceRequired}
               </span>
             )}
             {formData.salary && (
-              <span className="flex items-center text-sm bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">
-                <FiDollarSign className="mr-1" /> {formData.salary}
+              <span className="flex items-center text-sm bg-yellow-100 text-yellow-800 p-2! rounded-full">
+                <FiDollarSign className="mr-1!" /> {formData.salary}
               </span>
             )}
           </div>
 
           {formData.deadline && (
-            <div className="flex items-center text-sm text-gray-950 m-3">
-              <FiClock className="mr-2" />
+            <div className="flex items-center text-sm text-gray-950 m-3!">
+              <FiClock className="mr-2!" />
               Apply by:{' '}
               {formData.deadline.toLocaleDateString('en-US', {
                 year: 'numeric',
@@ -94,13 +94,13 @@ export default function JobPreview({ formData,
           )}
 
           {formData.skillsRequired?.length > 0 && (
-            <div className="pb-3">
-              <h5 className="font-bold text-gray-700 mb-1">Required Skills:</h5>
+            <div className="pb-3!">
+              <h5 className="font-bold text-gray-700 mb-1!">Required Skills:</h5>
               <div className="flex flex-wrap gap-2 mt-3">
                 {formData.skillsRequired.map((skill) => (
                   <span
                     key={skill}
-                    className="text-xs bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full"
+                    className="text-xs bg-indigo-100 text-indigo-800 p-2! rounded-md"
                   >
                     {skill}
                   </span>
@@ -111,7 +111,7 @@ export default function JobPreview({ formData,
 
           {formData.description && (
             <div className="pt-4 border-t border-gray-200">
-              <h5 className="font-medium text-gray-700 mb-2">Job Description:</h5>
+              <h5 className="font-medium text-gray-700 mb-2!">Job Description:</h5>
               <p className="text-sm text-gray-600 line-clamp-4">{formData.description}</p>
             </div>
           )}
@@ -120,16 +120,16 @@ export default function JobPreview({ formData,
 
 
 
-      <div className="flex justify-end mt-4 px-4 pb-4">
-  <motion.button
+      <div className="flex justify-end mt-4! p-4!">
+  {/* <motion.button
     onClick={handleSubmit}
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.95 }}
-    className="px-4 py-2 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-all disabled:opacity-50"
+    className="p-2! bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-all disabled:opacity-50"
     disabled={isSubmitting}
   >
     {isSubmitting ? 'Submitting...' : initialData?.id ? 'Update Job' : 'Post Job'}
-  </motion.button>
+  </motion.button> */}
 </div>
 
     </motion.div>

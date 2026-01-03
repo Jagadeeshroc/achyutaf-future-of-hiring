@@ -183,13 +183,13 @@ try {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4!">
+      <div className="">
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="text-center mb-12">
-          <h1 className="text-4xl font-extrabold text-indigo-900 mb-4">
+          <h1 className="text-4xl font-extrabold text-indigo-900 mb-4!">
             {initialData.id ? 'Update Job Posting' : 'Create a New Job Posting'}
           </h1>
-          <p className="text-xl text-indigo-700 max-w-2xl mx-auto">
+          <p className="text-xl text-indigo-700 text-center">
             {initialData.id
               ? 'Edit your job details to attract the best candidates'
               : 'Fill out the form below to post your job and reach qualified candidates'}
@@ -197,7 +197,7 @@ try {
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="text-center mb-12">
-          <div className="max-w-2xl mx-auto m-3" >               
+          <div className=" m-3! flex flex-row justify-center" >               
            <TipsCard />
           </div>
          
@@ -206,16 +206,16 @@ try {
 
        
 
-        <div className="flex flex-col lg:flex-row gap-8">
+        <div className="flex flex-col  lg:flex-row  justify-center ">
           <div className="lg:w-2/3">
             <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-2xl overflow-hidden">
-              <div className="flex border-b border-gray-200">
+              <div className="flex  border-b border-gray-200">
                 {tabOrder.map((tab) => (
                   <button
                     key={tab}
                     type="button"
                     onClick={() => setActiveTab(tab)}
-                    className={`flex-1 py-4 px-6 text-center font-medium transition-all ${activeTab === tab
+                    className={`flex-1 p-4! text-center font-medium transition-all ${activeTab === tab
                       ? 'text-indigo-600 border-b-2 border-indigo-600'
                       : 'text-gray-500 hover:text-indigo-500'
                       }`}
@@ -224,7 +224,7 @@ try {
                   </button>
                 ))}
               </div>
-              <div className="p-8">
+              <div className="p-8!">
                 <AnimatePresence mode="wait">
                   {activeTab === 'basic' && (
                     <BasicInfoTab
@@ -280,7 +280,7 @@ try {
                         onClick={handlePrevious}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="p-2 m-2 bg-gray-400 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition-all text-black"
+                        className="p-2! m-2! bg-gray-400 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition-all text-black"
                       >
                         Previous
                       </motion.button>
@@ -291,10 +291,10 @@ try {
                             type="button"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="m-2 p-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition-all disabled:opacity-50"
+                            className="m-2! p-2! bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition-all disabled:opacity-50"
                             disabled={isSubmitting}
                           >
-                            {isSubmitting ? 'Submitting...' : initialData.id ? 'Update Job' : 'Post Job'}
+                            {isSubmitting ? 'Submitting...' : initialData.id ? 'Update Job' : '   Post Job Now   '}
                           </motion.button>
                         ) : (
                           <motion.button
@@ -302,7 +302,7 @@ try {
                             onClick={handleNext}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="p-1 m-2 bg-indigo-500 text-white rounded-5xl! font-medium hover:bg-indigo-600 transition-all"
+                            className="p-2! m-2! rounded-md bg-indigo-500 text-white rounded-5xl! font-medium hover:bg-indigo-600 transition-all"
                           >
                             Next
                           </motion.button>
