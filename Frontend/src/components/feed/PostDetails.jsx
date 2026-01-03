@@ -223,7 +223,7 @@ const renderDiscoverPostCard = (post, handlePostClick) => (
 );
 
 // Main PostDetails Component
-const PostDetails = ({ apiBaseUrl = 'http://localhost:5000', className = '', actions = [] }) => {
+const PostDetails = ({ apiBaseUrl = 'https://achyutab.onrender.com', className = '', actions = [] }) => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [post, setPost] = useState(null);
