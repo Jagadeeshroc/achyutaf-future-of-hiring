@@ -87,7 +87,7 @@ export const ChatWindow = ({
       </div>
 
       {/* Message List */}
-      <div className="flex-1 p-5!  bg-amber-300 h-100 overflow-auto ">
+      <div className="flex-1 p-5!  bg-amber-200 h-100 overflow-auto ">
         {messages.map((msg) => (
           <MessageBubble key={msg._id} message={msg} currentUser={currentUser} />
         ))}
