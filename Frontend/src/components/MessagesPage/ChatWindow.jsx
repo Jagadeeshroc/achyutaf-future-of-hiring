@@ -24,7 +24,7 @@ export const ChatWindow = ({
   if (!conversation) {
     // This placeholder is now hidden on mobile (md:flex)
     return (
-      <div className="flex-1 items-center justify-center h-screen hidden md:flex">
+      <div className="flex-1 items-center justify-center h-screen! hidden md:flex">
         <div className="text-center">
             <MessageSquarePlus size={64} className="mx-auto text-gray-300 dark:text-gray-600" />
             <h3 className="mt-2 text-xl font-medium text-gray-800 dark:text-gray-200">Select a conversation</h3>
