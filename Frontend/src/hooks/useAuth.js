@@ -4,7 +4,7 @@ import axios from "axios";
 
 // Make sure this is defined, or import it from a config file
 // const API_URL = process.env.REACT_APP_API_URL || 'https://achyutab.onrender.com/';
-const API_URL = import.meta.env.VITE_API_URL || "https://achyutab.onrender.com/";
+const API_URL = import.meta.env.VITE_API_URL || "https://achyutab.onrender.com";
 
 
 export const useAuth = () => {
