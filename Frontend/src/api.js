@@ -2,10 +2,10 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://achyutab.onrender.com/",
+  baseURL: import.meta.env.VITE_API_URL,
 });
 
-// Set the Authorization header for all requests
+// Add token automatically
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
   if (token) {
@@ -14,4 +14,4 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-export default api; // ✅ default export
+export default api;
