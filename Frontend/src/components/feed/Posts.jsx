@@ -197,12 +197,21 @@ const Posts = ({ apiBaseUrl = 'https://achyutab.onrender.com/', className = '' }
       <div className="p-4! border-b border-gray-100">
         <div className="flex items-start justify-between">
           <div className="flex items-start space-x-4 flex-1">
-            <img
+            {/* <img
               src={post.user.avatar ? `${axios.defaults.baseURL}${post.user.avatar}` : '/default-avatar.png'}
               alt={post.user.name || post.user.email || 'Unknown User'}
               className="w-12 h-12 rounded-full object-cover m-1!"
               onError={(e) => (e.target.src = '/default-avatar.png')}
-            />
+            /> */}
+
+            <Avatar
+        user={{
+          avatar: user?.avatar,
+          name: renderName ? renderName(user) : (user?.name || user?.email || 'Unknown User'),
+        }}
+        size={48}
+         className="w-12 h-12 rounded-full object-cover m-1!"
+      />
             <div className="flex-1 min-w-0">
               <h3 className="font-semibold text-gray-900 truncate text-lg">
                 {post.user.name || post.user.email || 'Unknown User'}
