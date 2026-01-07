@@ -6,6 +6,7 @@ import {
   FaUserCircle, FaThumbsUp, FaComment, FaShare, FaPaperPlane,
   FaImage, FaTimes, FaSpinner, FaUsers, FaCompass
 } from 'react-icons/fa';
+import Avatar from '../ui/Avatar';
 
 const Posts = ({ apiBaseUrl = 'https://achyutab.onrender.com/', className = '' }) => {
   const navigate = useNavigate();
